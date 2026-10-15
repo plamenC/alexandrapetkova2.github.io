@@ -6,24 +6,24 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: targets.mind; maxTrack: 1;" color-space="sRGB"
+    <a-scene mindar-image="imageTargetSrc: targets.mind; maxTrack: 2;" color-space="sRGB"
     renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
     device-orientation-permission-ui="enabled: false">
       <a-assets timeout="0">
-         <video id="vid1" data-src="videos/VIDEO0.mp4" preload="none" loop playsinline muted
+         <video id="vid1" src="videos/VIDEO0.mp4" preload="none" loop playsinline muted
         crossorigin="anonymous"></video>
-      <video id="vid2" data-src="videos/VIDEO1.mp4" preload="none" loop playsinline muted
+      <video id="vid2" src="videos/VIDEO1.mp4" preload="none" loop playsinline muted
         crossorigin="anonymous"></video>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
        <a-entity id="target0" mindar-image-target="targetIndex: 0">
-      <a-video src="#vid1" position="0 0 0" width="1" height="0.65" rotation="0 0 0"></a-video>
+      <a-video src="#vid1" position="0 0 0" width="0.562" height="1" rotation="0 0 0"></a-video>
     </a-entity>
 
     <a-entity id="target1" mindar-image-target="targetIndex: 1">
-      <a-video src="#vid12" position="0 0 0" width="1" height="0.65" rotation="0 0 0"></a-video>
+      <a-video src="#vid2" position="0 0 0" width="0.707" height="1" rotation="0 0 0"></a-video>
     </a-entity>
 
     </a-scene>
